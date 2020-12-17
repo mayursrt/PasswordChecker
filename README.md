@@ -12,4 +12,11 @@ Install necessary Packages.</br>
 Run the script as your password/s as arguments.<br>
 eg. python PasswordChecker.py hello123<br>
 or<br>
-python PasswordChecker.py hello123 example2 example3.
+python PasswordChecker.py hello123 example2 example3.<br>
+
+
+# PasswordCheckerV2
+<br>
+If you have a txt file with list of passwords.<br>
+Run the script as your txt file as arguments.<br>
+eg. python PasswordChecker.py pass.txt<br>
