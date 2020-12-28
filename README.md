@@ -24,7 +24,8 @@ or<br>
 <br>
 <ol>
 <li>If you have a txt file with list of passwords.<br></li>
-<li>Run the script as your txt file as arguments.<br></li></ol>
+<li>Run the script as your txt file as arguments.<br></li>
 eg:
 		
 	python PasswordChecker.py pass.txt
+</ol>
