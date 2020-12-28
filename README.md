@@ -11,9 +11,12 @@ How to use:</br>
 <ol>
 <li>Install necessary Packages.</br></li>
 <li>Run the script as your password/s as arguments.<br></li>
-eg. python PasswordChecker.py hello123<br>
+eg:
+
+	python PasswordChecker.py hello123
 or<br>
-python PasswordChecker.py hello123 example2 example3.<br>
+
+	python PasswordChecker.py hello123 example2 example3
 </ol>
 
 
@@ -22,4 +25,6 @@ python PasswordChecker.py hello123 example2 example3.<br>
 <ol>
 <li>If you have a txt file with list of passwords.<br></li>
 <li>Run the script as your txt file as arguments.<br></li></ol>
-eg. python PasswordChecker.py pass.txt<br>
+eg:
+		
+	python PasswordChecker.py pass.txt
