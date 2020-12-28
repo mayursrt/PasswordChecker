@@ -22,6 +22,7 @@ or<br>
 
 # PasswordCheckerV2
 <br>
+How to use:</br>
 <ol>
 <li>If you have a txt file with list of passwords.<br></li>
 <li>Run the script as your txt file as arguments.<br></li>
