@@ -1,13 +1,16 @@
+#----------------------------------------------------------------------------------------------------------------------------
+# Imports
 import streamlit as st
 import requests
 import hashlib
 from PIL import Image
-import sys
+from check_pass import *
+#----------------------------------------------------------------------------------------------------------------------------
+
 
 
 #----------------------------------------------------------------------------------------------------------------------------
 # Title and Logo
-
 title_container = st.beta_container()
 col1, col2 = st.beta_columns([1, 5])
 image = Image.open('assets/logo.jpg')
@@ -26,49 +29,25 @@ Check if your passwords have ever been a part of a Data Breach.
 
 #----------------------------------------------------------------------------------------------------------------------------
 # Body
-
-st.markdown("<font size=3>This webapp uses the HaveIBeenPwned API to check if the password is included in the Pwned Password Database.</font>", unsafe_allow_html=True)
+st.markdown("<font size=3>This webapp uses the <a href='https://haveibeenpwned.com/Passwords'>HaveIBeenPwned</a> API to check if the password is included in the Pwned Password Database.</font>", unsafe_allow_html=True)
 st.markdown("<font size=5>Pwned Passwords</font>", unsafe_allow_html=True)
 st.markdown("<font size=3>Pwned Passwords are 613,584,246 real world passwords previously exposed in data breaches. This exposure makes them unsuitable for ongoing use as they're at much greater risk of being used to take over other accounts.", unsafe_allow_html=True)
-st.markdown("<font color='089e00' size=3>This Check is performed through the API therefore it is safe. Also it uses SHA-256 hashing algorithm to encode entered passwords</font>", unsafe_allow_html=True)
+st.markdown("<font color='089e00' size=3>This Check is performed through the HaveIBeenPwned API and not the website, therefore it is safe from storing your passwords. Also it uses SHA-256 hashing algorithm to encode entered passwords.</font>", unsafe_allow_html=True)
 #----------------------------------------------------------------------------------------------------------------------------
-
 
 
 
 #----------------------------------------------------------------------------------------------------------------------------
 # User Input
-st.subheader('Enter your Password')
+st.subheader('Enter a Password')
 
 user_password = st.text_input('', type='password')
 #----------------------------------------------------------------------------------------------------------------------------
 
-############################################################################################################################# 
-#############################################################################################################################
+
+
 #----------------------------------------------------------------------------------------------------------------------------
-# Functions
-def  req_api_data(query_char):
-	url = 'https://api.pwnedpasswords.com/range/' + query_char
-	res = requests.get(url)
-
-	if res.status_code != 200:
-		raise RuntimeError(f'ERROR FETCHING: {res.status_code}, CHECK API AND TRY AGAIN')
-	return res
-
-def get_count(hashes, tail_hash):
-	hashes =  (line.split(':') for line in hashes.text.splitlines())
-	for h, count in hashes:
-		if h == tail_hash:
-			return count
-	return 0
-
-def api_check(password):
-	sha1password = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
-	first5_char, tail = sha1password[:5], sha1password[5:]
-	response = req_api_data(first5_char)
-	return get_count(response, tail)
-
-
+# Main Function
 def main(password):
 	count = api_check(password)
 	if count:
@@ -85,23 +64,15 @@ if user_password:
 
 
 
-
-
-
-#----------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-#----------------------------------------------------------------------------------------------------------------------------
-#Footer
+#---------------------------------------------------------------------------------------------------------------------------
+# Footer
 #MainMenu {visibility: hidden;}
 
 footer="""<style>
 
 
 a:link , a:visited{
-color: blue;
+color: black;
 background-color: transparent;
 text-decoration: underline;
 }
@@ -129,27 +100,9 @@ text-align: center;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+#---------------------------------------------------------------------------------------------------------------------------
 
-# <a style='display: block; text-align: center;' href="https://github.com/mayursrt" target="_blank">Mayur Machhi</a>
 
-#----------------------------------------------------------------------------------------------------------------------------
-# hide_streamlit_style = """
-#             <style>
-#             footer {visibility: hidden;}
-#             footer:after {
-# 	content:'Made in streamlit with ❤️ by Mayur'; 
-# 	visibility: visible;
-# 	display: block;
-# 	position: relative;
-# 	#background-color: red;
-# 	padding: 5px;
-# 	top: 2px;
-# 	width: 100%;
-# background-color: white;
-# color: black;
-# text-align: center;
-# }
-#             </style>
-#             """
-# st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-#----------------------------------------------------------------------------------------------------------------------------
+
+############################################################################################################################# 
+#############################################################################################################################
