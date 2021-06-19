@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run crypto-viewer.py
+web: sh setup.sh && streamlit run password-checker-webapp.py
