@@ -66,11 +66,11 @@ if user_password:
 
 #---------------------------------------------------------------------------------------------------------------------------
 # Footer
-#MainMenu {visibility: hidden;}
+
 
 footer="""<style>
 
-
+#MainMenu {visibility: hidden;}
 a:link , a:visited{
 color: black;
 background-color: transparent;
