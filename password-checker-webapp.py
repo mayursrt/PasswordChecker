@@ -29,6 +29,7 @@ Check if your passwords have ever been a part of a Data Breach.
 
 #----------------------------------------------------------------------------------------------------------------------------
 # Body
+st.write('')
 st.markdown("<font size=3>This webapp uses the <a href='https://haveibeenpwned.com/Passwords'>HaveIBeenPwned</a> API to check if the password is included in the Pwned Password Database.</font>", unsafe_allow_html=True)
 st.markdown("<font size=5>Pwned Passwords</font>", unsafe_allow_html=True)
 st.markdown("<font size=3>Pwned Passwords are 613,584,246 real world passwords previously exposed in data breaches. This exposure makes them unsuitable for ongoing use as they're at much greater risk of being used to take over other accounts.", unsafe_allow_html=True)
@@ -61,6 +62,15 @@ def main(password):
 if user_password:
 	main(user_password)
 #----------------------------------------------------------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Links
+st.write('')
+st.markdown(f"If you are not sure about trusting us by sending your passwords through the website or over the internet, Check out this <a href='https://github.com/mayursrt/PasswordChecker/tree/main/PasswordCheckerScript'>Password Checker Script</a>. This Script will allow you to check your passwords locally on your computer. ", unsafe_allow_html=True)
+st.markdown(f"To make sure your accounts are safe by generating strong passwords, visit <a href='https://password-check.herokuapp.com/'>Password Generator</a>.", unsafe_allow_html=True)
+#---------------------------------------------------------------------------------------------------------------------------
 
 
 
