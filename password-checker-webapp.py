@@ -70,7 +70,7 @@ if user_password:
 st.write('')
 st.markdown(f"If you are not sure about trusting us by sending your passwords through the website or over the internet, Check out this <a href='https://github.com/mayursrt/PasswordChecker/tree/main/PasswordCheckerScript'>Password Checker Script</a>. This Script will allow you to check your passwords locally on your computer. ", unsafe_allow_html=True)
 st.write('')
-st.markdown(f"To make sure your accounts are safe by generating strong passwords, visit <a href='https://password-check.herokuapp.com/'>Password Generator</a>.", unsafe_allow_html=True)
+st.markdown(f"To make sure your accounts are safe by generating strong passwords, visit <a href='https://generate-password-webapp.herokuapp.com/'>Password Generator</a>.", unsafe_allow_html=True)
 #---------------------------------------------------------------------------------------------------------------------------
 
 
