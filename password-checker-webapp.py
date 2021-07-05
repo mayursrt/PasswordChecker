@@ -42,7 +42,10 @@ st.markdown("<font color='089e00' size=3>This Check is performed through the Hav
 # User Input
 st.subheader('Enter a Password')
 
-user_password = st.text_input('', type='password')
+
+with st.form(key='my_form', clear_on_submit=True):
+	user_password = st.text_input('', type='password')
+	submit_button = st.form_submit_button(label='Check')
 #----------------------------------------------------------------------------------------------------------------------------
 
 
