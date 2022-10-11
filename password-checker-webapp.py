@@ -71,7 +71,7 @@ if user_password:
 #----------------------------------------------------------------------------------------------------------------------------
 # Links
 st.write('')
-st.markdown(f"If you are not sure about trusting us by sending your passwords through the website or over the internet, Check out this <a href='https://github.com/mayursrt/PasswordChecker/tree/main/PasswordCheckerScript'>Password Checker Script</a>. This Script will allow you to check your passwords locally on your computer. ", unsafe_allow_html=True)
+st.markdown(f"If you are not sure about trusting us by sending your passwords through the website or over the internet, Check out this <a href='https://github.com/sajinshivdas/PasswordChecker/tree/main/PasswordCheckerScript'>Password Checker Script</a>. This Script will allow you to check your passwords locally on your computer. ", unsafe_allow_html=True)
 st.write('')
 st.markdown(f"To make sure your accounts are safe by generating strong passwords, visit <a href='https://generate-password-webapp.herokuapp.com/'>Password Generator</a>.", unsafe_allow_html=True)
 #---------------------------------------------------------------------------------------------------------------------------
@@ -108,7 +108,7 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>Made in Streamlit with ❤️ by <a href='https://github.com/mayursrt'>Mayur</a>.
+<p>Made in Streamlit with by <a href='https://github.com/sajinshivdas/PasswordChecker/tree/main/PasswordCheckerScript'>Sajin Shivdas</a>.
 
 </p>
 </div>
