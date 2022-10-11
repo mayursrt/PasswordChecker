@@ -13,7 +13,7 @@ from check_pass import *
 # Title and Logo
 title_container = st.beta_container()
 col1, col2 = st.beta_columns([1, 5])
-image = Image.open('assets/logo.jpg')
+image = Image.open('assets/logo.JPG')
 with title_container:
     with col1:
        st.image(image)
